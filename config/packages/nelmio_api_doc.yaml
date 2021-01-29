@@ -1,0 +1,17 @@
+
+nelmio_api_doc:
+  documentation:
+    info:
+      title: Oauth2 Server App
+      description: This is my oauth2 server app
+      version: 1.0.0
+
+    securityDefinitions:
+      Bearer:
+        type: apiKey
+        description: 'Value: Bearer {access_token}'
+        name: Authorization
+        in: header
+  areas:
+    path_patterns:
+      - ^/api(?!/doc$)
