@@ -39,8 +39,8 @@ class ArticleController extends AbstractFOSRestController
         $limit = $request->query->get('limit', 10);
 
         $articles = $this->articleRepository->getAllArticles($offset, $limit);
-        
         $view = $this->view($articles, Response::HTTP_OK , []);
+        
         return $this->handleView($view);
     }
 
