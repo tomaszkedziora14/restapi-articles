@@ -56,6 +56,7 @@ class ArticleController extends AbstractFOSRestController
         $form = $this->createForm(ArticleType::class, $article);
         $data = json_decode($request->getContent(), true);
         $form->submit($data);
+        
             if ($form->isSubmitted() && $form->isValid()) {
               $em = $this->getDoctrine()->getManager();
               $em->persist($article);
